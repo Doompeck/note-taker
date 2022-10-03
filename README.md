@@ -24,15 +24,15 @@ Benjamin Stanfield
 ​
 ## Deployed Page
 ​
-https://doompeck.github.io/XXX
+https://note-tracker-project-11.herokuapp.com/
 ​
 ## GitHub Repo
 ​
-[code-quiz] https://github.com/Doompeck/XXX
+https://github.com/Doompeck/note-taker
 ​
 ## Project Description
 ​
-XXX
+After being given the front-end code I was tasked with building the back-end code for routes and functionality.  The goal was to focus on learning the function of routes and reading/writing json data to store as a pseudo-database.  A precursor to understanding databasing going forward.
 ​
 ## Installation
 ​
@@ -40,7 +40,10 @@ Click the deployment link above.
 ​
 ## Usage
 
-1. XXXX
+1. click the deployed link.
+2. click "get started".
+3. enter a note "title" and "note text" in the fields.
+4. Once fields are filled you may click the save button to store the note.
 
 ​
 ## Test Instructions
@@ -53,7 +56,7 @@ n/a
 ​
 ## Preview Image
 ​
-[![image](./assets/images/Java%20Quiz.gif)](./assets/images/Java%20Quiz.gif)
+[![image](./public/assets/images/Note%20Taker.gif)](./public/assets/images/Note%20Taker.gif)
 ​
 ## GitHub userName
 ​
