@@ -1,8 +1,9 @@
 // Requires
 const fs = require('fs');
 const path = require('path');
+const router = require('express').Router();
 
-module.exports = (app) => {
+module.exports = app => {
   fs.readFile("db/db.json", "utf-8", (err, data) => {
     if (err) throw err;
 
@@ -47,3 +48,5 @@ module.exports = (app) => {
     };
   });
 };
+
+module.exports = router;
