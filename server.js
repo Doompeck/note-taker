@@ -1,6 +1,7 @@
 // Requires
 const express = require("express");
-const routes = require("./routes/routes");
+const apiRoutes = require("./routes/apiRoutes");
+const htmlRoutes = require("./routes/htmlRoutes");
 
 // Express intitialization
 const app = express();
@@ -9,8 +10,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-app.use("/api", routes);
-app.use("/", routes);
+app.use("/api", apiRoutes);
+app.use("/", htmlRoutes);
 
 // Listener
 app.listen(PORT, function () {
