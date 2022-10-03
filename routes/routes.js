@@ -1,18 +1,20 @@
 // Requires
-const fs = require('fs');
-const path = require('path');
 const router = require('express').Router();
+const store = require('../db/store');
 
-module.exports = app => {
-  fs.readFile("db/db.json", "utf-8", (err, data) => {
-    if (err) throw err;
 
-    var notes = JSON.parse(data);
 
 // API routes
 // Note get route to return all notes.
-    app.get("/api/notes", function(req, res) {
-        res.json(notes);
+    app.get("/notes", (req, res) => {
+        store
+            .getNotes()
+            .then(notes => {
+                res.json(notes);
+            })
+            .catch(err => {
+                res.status(500).json(err);
+            });
     });
 
 // Note post route for new note.
@@ -46,7 +48,7 @@ module.exports = app => {
             return true;
         });
     };
-  });
-};
+
+
 
 module.exports = router;
