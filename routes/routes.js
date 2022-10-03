@@ -19,7 +19,7 @@ module.exports = (app) => {
         let newNote = req.body;
         notes.push(newNote);
         updateDB();
-        return console.log("New no0te added: " + newNote.title);
+        return console.log("New note added: " + newNote.title);
     });
 
 // Not get route for individual notes with the id in the parameter.
